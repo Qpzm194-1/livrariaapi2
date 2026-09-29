@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS livraria;
+
+USE livraria;
+
+CREATE TABLE IF NOT EXISTS livros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    estoque INT DEFAULT 0
+);
