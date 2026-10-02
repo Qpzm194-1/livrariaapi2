@@ -1,12 +1,7 @@
-import health from '../controller/healthController.js'     
-import welcome from '../controller/welcomeController.js'   
-import calculus from '../controller/calculusController.js' 
-import book from '../controller/bookController.js';
+import bookController from './controller/bookController.js';
 
-
-export function addRoutes(api) {    
-  api.use(health);           
-  api.use(welcome);          
-  api.use(calculus);
-  api.use(book);      
+export function addRoutes(api) {
+   
+    api.get('/books', bookController.getBooks);
+    api.post('/books', bookController.postBook);
 }
